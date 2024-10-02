@@ -141,16 +141,16 @@
           <ul id="navbar"
             class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
             <li class="nav-item">
-              <a class="nav-link me-4 active" href="index.html" routerLinkActive="router-link-active">Home</a>
+              <a class="nav-link me-4 active" href="index.html" routerLinkActive="router-link-active" [routerLink]="['/home']">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-4" href="about.html">About</a>
+              <a class="nav-link me-4" href="about.html" [routerLink]="['/about']">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-4" href="shop.html">Shop</a>
+              <a class="nav-link me-4" href="shop.html" [routerLink]="['/shop']">Shop</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-4" href="blog.html" [routerLink]="['/blog']"  >Blogs</a>
+              <a class="nav-link me-4" href="blog.html" [routerLink]="['/blog']">Blogs</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link me-4 dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -161,7 +161,7 @@
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="shop.html" class="dropdown-item fw-light">Shop <span
+                  <a href="shop.html" class="dropdown-item fw-light" [routerLink]="['/shop']">Shop <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
@@ -169,29 +169,29 @@
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="cart.html" class="dropdown-item fw-light">Cart <span
+                  <a href="cart.html" class="dropdown-item fw-light" [routerLink]="['/cart']">Cart <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="checkout.html" class="dropdown-item fw-light">Checkout <span
+                  <a href="checkout.html" class="dropdown-item fw-light" [routerLink]="['/checkout']">Checkout <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="blog.html" class="dropdown-item fw-light">Blog <span
+                  <a href="blog.html" class="dropdown-item fw-light" [routerLink]="['/blog']">Blog <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="single-post.html" class="dropdown-item fw-light">Single Post <span
+                  <a href="single-post.html" class="dropdown-item fw-light" [routerLink]="['/singlePost']">Single Post <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="contact.html" class="dropdown-item fw-light">Contact <span
+                  <a href="contact.html" class="dropdown-item fw-light" [routerLink]="['/contact']">Contact <span
                       class="badge bg-primary">Pro</span></a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-4" href="contact.html">Contact</a>
+              <a class="nav-link me-4" href="contact.html" [routerLink]="['/contact']">Contact</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-decoration-underline me-4"

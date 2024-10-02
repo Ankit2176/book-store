@@ -18,7 +18,6 @@
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-<<<<<<< HEAD
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -30,11 +29,6 @@
             "scripts": [
 
             ],
-=======
-            "assets": ["src/assets"],
-            "styles": ["src/styles.css"],
-            "scripts": [],
->>>>>>> 50d6134d7c055b3d3f21fee559e14fd6a40a6f1c
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -85,7 +79,6 @@
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-<<<<<<< HEAD
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -93,12 +86,6 @@
             "styles": [
               "src/styles.css",
                "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-=======
-            "assets": ["src/assets"],
-            "styles": [
-              "src/styles.css",
-              "../node_modules/bootstrap/dist/css/bootstrap.min.css"
->>>>>>> 50d6134d7c055b3d3f21fee559e14fd6a40a6f1c
             ],
             "scripts": [
             ]
