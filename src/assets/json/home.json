@@ -1,0 +1,88 @@
+{
+  "InstaObj": [
+    { "Image": "assets/images/insta-item1.jpg" },
+    { "Image": "assets/images/insta-item2.jpg" },
+    { "Image": "assets/images/insta-item3.jpg" },
+    { "Image": "assets/images/insta-item4.jpg" },
+    { "Image": "assets/images/insta-item5.jpg" },
+    { "Image": "assets/images/insta-item6.jpg" }
+  ],
+
+  "LatestPostObj": [
+    {
+      "Image": "assets/images/post-item1.jpg",
+      "Head": "10 Must-Read Books of the Year: Our Top Picks!",
+      "Des": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge."
+    },
+    {
+      "Image": "assets/images/post-item2.jpg",
+      "Head": "The Fascinating Realm of Science Fiction",
+      "Des": "Explore the intersection of technology and sustainability in our latest blog post. Learn about the innovative"
+    },
+    {
+      "Image": "assets/images/post-item3.jpg",
+      "Head": "Finding Love in the Pages of a Book",
+      "Des": "Stay ahead of the curve with our insightful look into the rapidly evolving landscape of wearable technology."
+    },
+    {
+      "Image": "assets/images/post-item4.jpg",
+      "Head": "Reading for Mental Health: How Books Can Heal and Inspire",
+      "Des": "In today's remote work environment, productivity is key. Discover the top apps and tools that can help you stay."
+    }
+  ],
+
+  "CusReviewsObj": [
+    {
+      "Reviews": "I stumbled upon this bookstore while visiting the city, and it instantly became my favorite spot. The cozy atmosphere, friendly staff, and wide selection of books make every visit a delight!",
+      "Name": "Emma Chamberlin"
+    },
+    {
+      "Reviews": "As an avid reader, I'm always on the lookout for new releases, and this bookstore never disappoints. They always have the latest titles, and their recommendations have introduced me to some incredible reads!",
+      "Name": "Thomas John"
+    },
+    {
+      "Reviews": "I ordered a few books online from this store, and I was impressed by the quick delivery and careful packaging. It's clear that they prioritize customer satisfaction, and I'll definitely be shopping here again!",
+      "Name": "Kevin Baryan "
+    },
+    {
+      "Reviews": "I stumbled upon this bookstore while visiting the city, and it instantly became my favorite spot. The cozy atmosphere, friendly staff, and wide selection of books make every visit a delight!",
+      "Name": "Emma Chamberlin"
+    }
+  ],
+
+  "CatogObj": [
+    {
+      "Image": "assets/images/category1.jpg",
+      "Tag": "Romance"
+    },
+    {
+      "Image": "assets/images/category2.jpg",
+      "Tag": "Lifestyle"
+    },
+    {
+      "Image": "assets/images/category3.jpg",
+      "Tag": "recipe"
+    }
+  ],
+
+  "bestReviewedObj ": [
+    {
+      "Image": "assets/images/product-item7.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item8.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item9.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    }
+  ]
+}

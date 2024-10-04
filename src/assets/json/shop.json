@@ -1,0 +1,140 @@
+{
+  "ShopObj": [
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item1.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item2.png",
+      "Head": "Story of Success",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item3.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item4.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item5.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item6.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item7.png",
+      "Head": "Life Flight",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item8.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item9.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item10.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item11.png",
+      "Head": "Life Flight",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    }
+  ]
+}

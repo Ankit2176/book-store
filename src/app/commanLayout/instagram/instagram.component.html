@@ -4,19 +4,32 @@
       <h3>Instagram</h3>
     </div>
     <div class="row">
+      @for(item of InstaObj ;track $index){
       <div class="col-md-2">
         <figure class="instagram-item position-relative rounded-3">
-          <a href="https://templatesjungle.com/" class="image-link position-relative">
-            <div class="icon-overlay position-absolute d-flex justify-content-center">
+          <a
+            href="https://www.instagram.com/instagram/?hl=en"
+            class="image-link position-relative"
+          >
+            <div
+              class="icon-overlay position-absolute d-flex justify-content-center"
+            >
               <svg class="instagram">
                 <use xlink:href="#instagram"></use>
               </svg>
             </div>
-            <img src="assets/images/insta-item1.jpg" alt="instagram" class="img-fluid rounded-3 insta-image">
+            <img
+              src="{{ item.Image }}"
+              alt="instagram"
+              class="img-fluid rounded-3 insta-image"
+            />
           </a>
         </figure>
       </div>
-      <div class="col-md-2">
+
+      }
+
+      <!-- <div class="col-md-2">
         <figure class="instagram-item position-relative rounded-3">
           <a href="https://templatesjungle.com/" class="image-link position-relative">
             <div class="icon-overlay position-absolute d-flex justify-content-center">
@@ -75,7 +88,7 @@
             <img src="assets/images/insta-item6.jpg" alt="instagram" class="img-fluid rounded-3 insta-image">
           </a>
         </figure>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
