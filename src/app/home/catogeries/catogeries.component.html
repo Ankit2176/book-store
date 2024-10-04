@@ -1,26 +1,30 @@
-<section id="categories" class="padding-large pt-0">
+<section id="categories" class="padding-large pt-0" ngSkipHydration>
   <div class="container">
     <div class="section-title overflow-hidden mb-4">
       <h3 class="d-flex align-items-center">Categories</h3>
     </div>
-    <div class="row">
+    <div class="row" ngSkipHydration>
+      @for(item of CatogObj ;track $index){
       <div class="col-md-4">
         <div class="card mb-4 border-0 rounded-3 position-relative">
           <a href="shop.html">
             <img
-              src="assets/images/category1.jpg"
+              src="{{ item.Image }}"
               class="img-fluid rounded-3"
               alt="cart item"
             />
             <h6
               class="position-absolute bottom-0 bg-primary m-4 py-2 px-3 rounded-3"
             >
-              <a href="shop.html" class="text-white">Romance</a>
+              <a href="shop.html" class="text-white">{{ item.Tag }}</a>
             </h6>
           </a>
         </div>
       </div>
-      <div class="col-md-4">
+
+      }
+
+      <!-- <div class="col-md-4">
         <div class="card text-center mb-4 border-0 rounded-3">
           <a href="shop.html">
             <img
@@ -51,7 +55,7 @@
             </h6>
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>

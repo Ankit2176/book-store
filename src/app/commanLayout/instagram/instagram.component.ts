@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { HomeService } from '../../services/home/home.service';
 
 @Component({
   selector: 'app-instagram',
@@ -7,6 +9,27 @@ import { Component } from '@angular/core';
   templateUrl: './instagram.component.html',
   styleUrl: './instagram.component.css'
 })
-export class InstagramComponent {
+export class InstagramComponent implements OnInit {
+
+
+  InstaObj: any
+
+
+  /**
+   *
+   */
+  constructor(private Services: HomeService) {
+
+
+  }
+
+  ngOnInit(): void {
+
+    this.Services.getData().subscribe((res: any) => {
+
+      this.InstaObj = res.InstaObj
+    })
+
+  }
 
 }

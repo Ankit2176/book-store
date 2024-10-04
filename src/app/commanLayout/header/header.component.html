@@ -97,23 +97,26 @@
       d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
   </symbol>
 </svg>
-
 <app-search-popup></app-search-popup>
 
 <header id="header" class="site-header">
-
-  <div class="top-info border-bottom d-none d-md-block ">
+  <div class="top-info border-bottom d-none d-md-block">
     <div class="container-fluid">
       <div class="row g-0">
         <div class="col-md-4">
-          <p class="fs-6 my-2 text-center">Need any help? Call us <a href="#">112233344455</a></p>
+          <p class="fs-6 my-2 text-center">
+            Need any help? Call us <a href="#">112233344455</a>
+          </p>
         </div>
         <div class="col-md-4 border-start border-end">
-          <p class="fs-6 my-2 text-center">Summer sale discount off 60% off! <a class="text-decoration-underline"
-              href="shop.html" [routerLink]="['/shop']">Shop Now</a></p>
+          <p class="fs-6 my-2 text-center"> Summer sale discount off 60% off!
+            <a class="text-decoration-underline" [routerLink]="['/shop']">Shop Now</a>
+          </p>
         </div>
         <div class="col-md-4">
-          <p class="fs-6 my-2 text-center">2-3 business days delivery & free returns</p>
+          <p class="fs-6 my-2 text-center">
+            2-3 business days delivery & free returns
+          </p>
         </div>
       </div>
     </div>
@@ -122,7 +125,7 @@
   <nav id="header-nav" class="navbar navbar-expand-lg py-3">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/images/main-logo.png" class="logo">
+        <img src="assets/images/main-logo.png" class="logo" />
       </a>
       <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -133,7 +136,7 @@
       <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
         <div class="offcanvas-header px-4 pb-0">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/images/main-logo.png" class="logo">
+            <img src="assets/images/main-logo.png" class="logo" />
           </a>
           <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close"
             data-bs-target="#bdNavbar"></button>
@@ -148,7 +151,7 @@
               <a class="nav-link me-4" href="about.html" [routerLink]="['/about']">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link me-4" href="shop.html" [routerLink]="['/shop']">Shop</a>
+              <a class="nav-link me-4" [routerLink]="['/shop']">Shop</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-4" href="blog.html" [routerLink]="['/blog']">Blogs</a>
@@ -229,10 +232,14 @@
                             <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
                               <button class="nav-link text-capitalize active" id="nav-sign-in-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-sign-in" type="button" role="tab" aria-controls="nav-sign-in"
-                                aria-selected="true">Sign In</button>
+                                aria-selected="true">
+                                Sign In
+                              </button>
                               <button class="nav-link text-capitalize" id="nav-register-tab" data-bs-toggle="tab"
                                 data-bs-target="#nav-register" type="button" role="tab" aria-controls="nav-register"
-                                aria-selected="false">Register</button>
+                                aria-selected="false">
+                                Register
+                              </button>
                             </div>
                           </nav>
                           <div class="tab-content" id="nav-tabContent">
@@ -241,38 +248,42 @@
                               <div class="form-group py-3">
                                 <label class="mb-2" for="sign-in">Username or email address *</label>
                                 <input type="text" minlength="2" name="username" placeholder="Your Username"
-                                  class="form-control w-100 rounded-3 p-3" required>
+                                  class="form-control w-100 rounded-3 p-3" required />
                               </div>
                               <div class="form-group pb-3">
                                 <label class="mb-2" for="sign-in">Password *</label>
                                 <input type="password" minlength="2" name="password" placeholder="Your Password"
-                                  class="form-control w-100 rounded-3 p-3" required>
+                                  class="form-control w-100 rounded-3 p-3" required />
                               </div>
                               <label class="py-3">
-                                <input type="checkbox" required="" class="d-inline">
+                                <input type="checkbox" required="" class="d-inline" />
                                 <span class="label-body">Remember me</span>
                                 <span class="label-body"><a href="#" class="fw-bold">Forgot Password</a></span>
                               </label>
-                              <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Login</button>
+                              <button type="submit" name="submit" class="btn btn-dark w-100 my-3">
+                                Login
+                              </button>
                             </div>
                             <div class="tab-pane fade" id="nav-register" role="tabpanel"
                               aria-labelledby="nav-register-tab">
                               <div class="form-group py-3">
                                 <label class="mb-2" for="register">Your email address *</label>
                                 <input type="text" minlength="2" name="username" placeholder="Your Email Address"
-                                  class="form-control w-100 rounded-3 p-3" required>
+                                  class="form-control w-100 rounded-3 p-3" required />
                               </div>
                               <div class="form-group pb-3">
                                 <label class="mb-2" for="sign-in">Password *</label>
                                 <input type="password" minlength="2" name="password" placeholder="Your Password"
-                                  class="form-control w-100 rounded-3 p-3" required>
+                                  class="form-control w-100 rounded-3 p-3" required />
                               </div>
                               <label class="py-3">
-                                <input type="checkbox" required="" class="d-inline">
-                                <span class="label-body">I agree to the <a href="#" class="fw-bold">Privacy
-                                    Policy</a></span>
+                                <input type="checkbox" required="" class="d-inline" />
+                                <span class="label-body">I agree to the
+                                  <a href="#" class="fw-bold">Privacy Policy</a></span>
                               </label>
-                              <button type="submit" name="submit" class="btn btn-dark w-100 my-3">Register</button>
+                              <button type="submit" name="submit" class="btn btn-dark w-100 my-3">
+                                Register
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -372,5 +383,4 @@
       </div>
     </div>
   </nav>
-
 </header>

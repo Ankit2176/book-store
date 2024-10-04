@@ -11,41 +11,42 @@ import { HomeLayoutComponent } from './home/home-layout/home-layout.component';
 
 export const routes: Routes = [
 
+ 
   {
-    path:'',
-    component:LayoutComponent,
-    children:[
+    path: '',
+    component: LayoutComponent,
+    children: [
       {
-        path:'home',
-        component:HomeLayoutComponent
+        path: 'home',
+        component: HomeLayoutComponent
       },
       {
-        path:'blog',
-        component:BlogLayoutComponent
+        path: 'blog',
+        component: BlogLayoutComponent
       },
       {
-        path:'singlePage',
-        component:SinglePageLayoutComponent
+        path: 'singlePage',
+        component: SinglePageLayoutComponent
       },
       {
-        path:'cart',
-        component:CartLayoutComponent
+        path: 'cart',
+        component: CartLayoutComponent
       },
       {
-        path:'checkout',
-        component:CheckoutLayoutComponent
+        path: 'checkout',
+        component: CheckoutLayoutComponent
       },
       {
-        path:'singlePost',
-        component:SinglePostLayoutComponent
+        path: 'singlePost',
+        component: SinglePostLayoutComponent
       },
       {
-        path:'contact',
-        component:ContactLayoutComponent
+        path: 'contact',
+        component: ContactLayoutComponent
       },
       {
-        path:'shop',
-        component:ShopLayoutComponent
+        path: 'shop',
+        component: ShopLayoutComponent
       }
     ]
   }
