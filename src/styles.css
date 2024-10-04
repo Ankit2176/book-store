@@ -953,7 +953,7 @@ th{
   cursor: default;
   -webkit-transform: translateY(-40px);
   transform: translateY(-40px);
-  -webkit-backface-visibility: hidden;
+  /* -webkit-backface-visibility: hidden; */
   -webkit-transition-property: -webkit-transform;
   transition-property: transform;
   -webkit-transition-duration: 0.3s;
@@ -973,6 +973,12 @@ th{
 }
 .search-popup-form #search-popup-submit {
   display: none;
+}
+.search-popup {
+  display: none; /* Hidden by default */
+}
+.search-popup.is-visible {
+  display: block; /* Show when visible */
 }
 .search-popup .search-popup-close {
   display: block;

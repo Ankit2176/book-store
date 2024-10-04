@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { BlogService } from '../../services/blog/blog.service';
 
 @Component({
   selector: 'app-main-content',
@@ -8,6 +9,22 @@ import { RouterLink } from '@angular/router';
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.css'
 })
-export class MainContentComponent {
+export class MainContentComponent implements OnInit{
+
+
+  constructor (private service : BlogService) {}
+
+  mainDataObj : any
+
+  ngOnInit(): void {
+
+    this.service.getData().subscribe((res:any)=>{
+
+      this.mainDataObj = res.mainData;
+
+    })
+
+  }
+
 
 }

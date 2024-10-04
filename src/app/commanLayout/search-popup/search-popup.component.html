@@ -1,5 +1,6 @@
-<div class="search-popup">
-  <div class="search-popup-container">
+<div class="search-popup" (click)="closePopup()" [class.is-visible]="isVisible">
+
+  <div class="search-popup-container" (click)="$event.stopPropagation()">
 
     <form role="search" method="get" class="search-form" action="">
       <input type="search" id="search-form" class="search-field" placeholder="Type and press enter" value=""
@@ -34,6 +35,7 @@
         <a href="#" title="Fiction">Fiction</a>
       </li>
     </ul>
+
 
   </div>
 </div>

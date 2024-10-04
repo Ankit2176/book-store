@@ -1,4 +1,3 @@
-
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="search" xmlns="http://www.w3.org/2000/symbolsvg" viewBox="0 0 24 24">
     <path fill="currentColor" fill-rule="evenodd"
@@ -97,7 +96,9 @@
     <path
       d="M14 10.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0 0 1h7a.5.5 0 0 0 .5-.5zm0-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 .5-.5z" />
   </symbol>
-  </svg>
+</svg>
+
+<app-search-popup></app-search-popup>
 
 <header id="header" class="site-header">
 
@@ -109,7 +110,7 @@
         </div>
         <div class="col-md-4 border-start border-end">
           <p class="fs-6 my-2 text-center">Summer sale discount off 60% off! <a class="text-decoration-underline"
-              href="shop.html">Shop Now</a></p>
+              href="shop.html" [routerLink]="['/shop']">Shop Now</a></p>
         </div>
         <div class="col-md-4">
           <p class="fs-6 my-2 text-center">2-3 business days delivery & free returns</p>
@@ -141,7 +142,7 @@
           <ul id="navbar"
             class="navbar-nav text-uppercase justify-content-start justify-content-lg-center align-items-start align-items-lg-center flex-grow-1">
             <li class="nav-item">
-              <a class="nav-link me-4 active" href="index.html" routerLinkActive="router-link-active" [routerLink]="['/home']">Home</a>
+              <a class="nav-link me-4 active" routerLinkActive="router-link-active" [routerLink]="['/home']">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link me-4" href="about.html" [routerLink]="['/about']">About</a>
@@ -165,8 +166,8 @@
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="single-product.html" class="dropdown-item fw-light" [routerLink]="['/singlePage']">Single Product <span
-                      class="badge bg-primary">Pro</span></a>
+                  <a href="single-product.html" class="dropdown-item fw-light" [routerLink]="['/singlePage']">Single
+                    Product <span class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
                   <a href="cart.html" class="dropdown-item fw-light" [routerLink]="['/cart']">Cart <span
@@ -181,8 +182,8 @@
                       class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
-                  <a href="single-post.html" class="dropdown-item fw-light" [routerLink]="['/singlePost']">Single Post <span
-                      class="badge bg-primary">Pro</span></a>
+                  <a href="single-post.html" class="dropdown-item fw-light" [routerLink]="['/singlePost']">Single Post
+                    <span class="badge bg-primary">Pro</span></a>
                 </li>
                 <li>
                   <a href="contact.html" class="dropdown-item fw-light" [routerLink]="['/contact']">Contact <span
@@ -202,7 +203,7 @@
           <div class="user-items d-flex">
             <ul class="d-flex justify-content-end list-unstyled mb-0">
               <li class="search-item pe-3">
-                <a href="#" class="search-button">
+                <a class="search-button" (click)="searchPopup.openPopup()">
                   <svg class="search">
                     <use xlink:href="#search"></use>
                   </svg>
@@ -373,5 +374,3 @@
   </nav>
 
 </header>
-
-

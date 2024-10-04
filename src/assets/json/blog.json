@@ -1,0 +1,49 @@
+{
+  "mainData": [
+    {
+      "imgPath": "assets/images/post-item1.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item2.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item3.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item4.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item5.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item6.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item7.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item8.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    },
+    {
+      "imgPath": "assets/images/post-item9.jpg",
+      "bookTitle": "The Fascinating Realm of Science Fiction",
+      "bookDescription": "Dive into the world of cutting-edge technology with our latest blog post, where we highlight five essential gadge. "
+    }
+  ]
+}

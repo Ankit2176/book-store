@@ -1,0 +1,14 @@
+{
+  "cartData":[
+    {
+      "productImg":"assets/images/cart-item1.png",
+      "productName":"The Emerald Crown",
+      "productPrice":"$2000.00"
+    },
+    {
+      "productImg":"assets/images/cart-item2.png",
+      "productName":"The Last Enchantment",
+      "productPrice":"$400.00"
+    }
+  ]
+}

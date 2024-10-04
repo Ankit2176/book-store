@@ -9,4 +9,24 @@ import { Component } from '@angular/core';
 })
 export class SearchPopupComponent {
 
+  isVisible = false;
+
+  openPopup() {
+    this.isVisible = true;
+    setTimeout(() => {
+      const searchField = document.getElementById('search-form') as HTMLElement;
+      searchField?.focus();
+    }, 350);
+  }
+
+  closePopup() {
+    this.isVisible = false;
+  }
+
+  handleKeyup(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.closePopup();
+    }
+}
+
 }
