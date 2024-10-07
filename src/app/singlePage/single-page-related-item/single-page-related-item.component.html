@@ -1,73 +1,41 @@
-<section id="related-items" class="position-relative padding-large">
+<section id="related-items" class="position-relative padding-large ">
   <div class="container">
-    <div
-      class="section-title d-md-flex justify-content-between align-items-center mb-4"
-    >
+    <div class="section-title d-md-flex justify-content-between align-items-center mb-4">
       <h3 class="d-flex align-items-center">Related Items</h3>
-      <a href="shop.html" class="btn">View All</a>
+      <a [routerLink]="['/shop']" class="btn">View All</a>
     </div>
-    <div
-      class="position-absolute top-50 end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next product-slider-button-next"
-      tabindex="0"
-      role="button"
-      aria-label="Next slide"
-      aria-controls="swiper-wrapper-7ce12c7463863455"
-      aria-disabled="false"
-    >
-      <svg
-        class="chevron-forward-circle d-flex justify-content-center align-items-center p-2"
-        width="80"
-        height="80"
-      >
+    <div class="position-absolute top-50 end-0 pe-0 pe-xxl-5 me-0 me-xxl-5 swiper-next product-slider-button-next"
+      tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-7ce12c7463863455"
+      aria-disabled="false">
+      <svg class="chevron-forward-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
         <use xlink:href="#alt-arrow-right-outline"></use>
       </svg>
     </div>
     <div
       class="position-absolute top-50 start-0 ps-0 ps-xxl-5 ms-0 ms-xxl-5 swiper-prev product-slider-button-prev swiper-button-disabled"
-      tabindex="-1"
-      role="button"
-      aria-label="Previous slide"
-      aria-controls="swiper-wrapper-7ce12c7463863455"
-      aria-disabled="true"
-    >
-      <svg
-        class="chevron-back-circle d-flex justify-content-center align-items-center p-2"
-        width="80"
-        height="80"
-      >
+      tabindex="-1" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-7ce12c7463863455"
+      aria-disabled="true">
+      <svg class="chevron-back-circle d-flex justify-content-center align-items-center p-2" width="80" height="80">
         <use xlink:href="#alt-arrow-left-outline"></use>
       </svg>
     </div>
-    <div
-      class="swiper product-swiper swiper-initialized swiper-horizontal swiper-backface-hidden"
-    >
-      <div
-        class="swiper-wrapper"
-        id="swiper-wrapper-7ce12c7463863455"
-        aria-live="polite"
-      >
-        <div
-          class="swiper-slide swiper-slide-active"
-          role="group"
-          aria-label="1 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
+    <div class="swiper product-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+      <div class="swiper-wrapper" id="swiper-wrapper-7ce12c7463863455" aria-live="polite">
+
+
+        @for (item of bestSellItem; track $index) {
+        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6"
+          style="width: 287.2px; margin-right: 20px;">
           <div class="card position-relative p-4 border rounded-3">
             <div class="position-absolute">
-              <p class="bg-primary py-1 px-3 fs-6 text-white rounded-2">
-                10% off
+              <p class="bg-primary py-1 px-3 fs-6 text-white rounded-2 {{item.Display}}">
+                {{item.Offer}}
               </p>
             </div>
-            <img
-              src="assets/images/product-item1.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
+            <img src="{{item.Image}}" class="img-fluid shadow-sm" alt="product item">
+            <h6 class="mt-4 mb-0 fw-bold"><a href="single-product.html">{{item.Head}}</a></h6>
             <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
+              <p class="my-2 me-2 fs-6 text-black-50">{{item.Name}}</p>
 
               <div class="rating text-warning d-flex align-items-center">
                 <svg class="star star-fill">
@@ -87,18 +55,10 @@
                 </svg>
               </div>
             </div>
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
+            <span class="price text-primary fw-bold mb-2 fs-5">${{item.Price}}</span>
+            <div class="card-concern position-absolute start-0 end-0 d-flex gap-2">
+              <button type="button" href="#" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-title="Tooltip on top">
                 <svg class="cart">
                   <use xlink:href="#cart"></use>
                 </svg>
@@ -113,332 +73,10 @@
             </div>
           </div>
         </div>
-        <div
-          class="swiper-slide swiper-slide-next"
-          role="group"
-          aria-label="2 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
-          <div class="card position-relative p-4 border rounded-3">
-            <img
-              src="assets/images/product-item2.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
-            <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
+        }
 
-              <div class="rating text-warning d-flex align-items-center">
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-              </div>
-            </div>
-
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
-                <svg class="cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </button>
-              <a href="#" class="btn btn-dark">
-                <span>
-                  <svg class="wishlist">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="swiper-slide"
-          role="group"
-          aria-label="3 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
-          <div class="card position-relative p-4 border rounded-3">
-            <img
-              src="assets/images/product-item3.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
-            <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-
-              <div class="rating text-warning d-flex align-items-center">
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-              </div>
-            </div>
-
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
-                <svg class="cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </button>
-              <a href="#" class="btn btn-dark">
-                <span>
-                  <svg class="wishlist">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="swiper-slide"
-          role="group"
-          aria-label="4 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
-          <div class="card position-relative p-4 border rounded-3">
-            <div class="position-absolute">
-              <p class="bg-primary py-1 px-3 fs-6 text-white rounded-2">
-                10% off
-              </p>
-            </div>
-            <img
-              src="assets/images/product-item4.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
-            <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-
-              <div class="rating text-warning d-flex align-items-center">
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-              </div>
-            </div>
-
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
-                <svg class="cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </button>
-              <a href="#" class="btn btn-dark">
-                <span>
-                  <svg class="wishlist">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="swiper-slide"
-          role="group"
-          aria-label="5 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
-          <div class="card position-relative p-4 border rounded-3">
-            <img
-              src="assets/images/product-item5.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
-            <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-
-              <div class="rating text-warning d-flex align-items-center">
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-              </div>
-            </div>
-
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
-                <svg class="cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </button>
-              <a href="#" class="btn btn-dark">
-                <span>
-                  <svg class="wishlist">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          class="swiper-slide"
-          role="group"
-          aria-label="6 / 6"
-          style="width: 287.2px; margin-right: 20px"
-        >
-          <div class="card position-relative p-4 border rounded-3">
-            <img
-              src="assets/images/product-item6.png"
-              class="img-fluid shadow-sm"
-              alt="product item"
-            />
-            <h6 class="mt-4 mb-0 fw-bold">
-              <a href="single-product.html">Secrets of the Alchemist</a>
-            </h6>
-            <div class="review-content d-flex">
-              <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-
-              <div class="rating text-warning d-flex align-items-center">
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-                <svg class="star star-fill">
-                  <use xlink:href="#star-fill"></use>
-                </svg>
-              </div>
-            </div>
-
-            <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-            <div
-              class="card-concern position-absolute start-0 end-0 d-flex gap-2"
-            >
-              <button
-                type="button"
-                href="#"
-                class="btn btn-dark"
-                data-bs-toggle="tooltip"
-                data-bs-placement="top"
-                data-bs-title="Tooltip on top"
-              >
-                <svg class="cart">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </button>
-              <a href="#" class="btn btn-dark">
-                <span>
-                  <svg class="wishlist">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-      <span
-        class="swiper-notification"
-        aria-live="assertive"
-        aria-atomic="true"
-      ></span>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
     </div>
   </div>
 </section>
