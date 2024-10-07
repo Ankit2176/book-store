@@ -6,34 +6,26 @@ import { HomeService } from '../../services/home/home.service';
 import { RouterLink } from '@angular/router';
 // Updated import for Swiper 10 and above
 
-
-
 @Component({
   selector: 'app-best-selling-item',
   standalone: true,
   imports: [RouterLink],
   templateUrl: './best-selling-item.component.html',
-  styleUrls: ['./best-selling-item.component.css'] // Corrected from styleUrl to styleUrls
+  styleUrls: ['./best-selling-item.component.css'], // Corrected from styleUrl to styleUrls
 })
 export class BestSellingItemComponent implements AfterViewInit {
+  bestSellItem: any;
+  cartDataObj: any[] = [];
 
-  bestSellItem: any
-  /**
-   *
-   */
-  constructor(@Inject(DOCUMENT) private document: Document, private Services: HomeService) {
-
-
-  }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private Services: HomeService
+  ) {}
 
   ngOnInit(): void {
-
-
     this.Services.getData().subscribe((res: any) => {
-
-      this.bestSellItem = res.bestSellItemObj
-    })
-
+      this.bestSellItem = res.bestSellItemObj;
+    });
   }
 
   ngAfterViewInit() {
@@ -60,5 +52,12 @@ export class BestSellingItemComponent implements AfterViewInit {
         },
       });
     }
+  }
+
+  addToCart(item: any) {
+    const existingCart = localStorage.getItem('cart');
+    this.cartDataObj = existingCart ? JSON.parse(existingCart) : [];
+    this.cartDataObj.push(item);
+    localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
   }
 }
