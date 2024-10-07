@@ -20,6 +20,7 @@ export class MainShopComponent implements OnInit {
   constructor(private Services: ShopService) { }
 
   ngOnInit(): void {
+    debugger; 
     this.Services.getData().subscribe((res: any) => {
       this.ShopObj = res.ShopObj;
       this.totalItems = this.ShopObj.length;

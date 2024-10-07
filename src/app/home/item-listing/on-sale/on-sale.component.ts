@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HomeService } from '../../../services/home/home.service';
 
 @Component({
   selector: 'app-on-sale',
@@ -9,4 +10,26 @@ import { Component } from '@angular/core';
 })
 export class OnSaleComponent {
 
+  OnSaleObj: any
+
+
+  /**
+   *
+   */
+  constructor(private Services: HomeService) {
+
+
+  }
+
+
+
+  ngOnInit(): void {
+
+
+    this.Services.getData().subscribe((res: any) => {
+
+      this.OnSaleObj = res.OnSaleObj
+    })
+
+  }
 }

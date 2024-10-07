@@ -1,12 +1,12 @@
 {
   "ShopObj": [
     {
-      "Display": "d-none",
-      "Offer": "10% off",
-      "Image": "assets/images/product-item1.png",
-      "Head": "Blood on the Snow",
-      "Name": "Lauren Asher",
-      "Price": "870"
+        "Display": "d-none",
+        "Offer": "10% off",
+        "Image": "assets/images/product-item1.png",
+        "Head": "Blood on the Snow",
+        "Name": "Lauren Asher",
+        "Price": "870"
     },
     {
       "Display": "",

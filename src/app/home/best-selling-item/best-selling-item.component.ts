@@ -1,6 +1,9 @@
 import { Component, AfterViewInit, Inject } from '@angular/core';
 import Swiper from 'swiper'; // Updated import for Swiper 10 and above
 import { DOCUMENT } from '@angular/common';
+import { HomeLayoutComponent } from '../home-layout/home-layout.component';
+import { HomeService } from '../../services/home/home.service';
+import { RouterLink } from '@angular/router';
 // Updated import for Swiper 10 and above
 
 
@@ -8,18 +11,31 @@ import { DOCUMENT } from '@angular/common';
 @Component({
   selector: 'app-best-selling-item',
   standalone: true,
+  imports: [RouterLink],
   templateUrl: './best-selling-item.component.html',
   styleUrls: ['./best-selling-item.component.css'] // Corrected from styleUrl to styleUrls
 })
 export class BestSellingItemComponent implements AfterViewInit {
 
-
+  bestSellItem: any
   /**
    *
    */
-  constructor(@Inject(DOCUMENT) private document: Document) {
+  constructor(@Inject(DOCUMENT) private document: Document, private Services: HomeService) {
+
 
   }
+
+  ngOnInit(): void {
+
+
+    this.Services.getData().subscribe((res: any) => {
+
+      this.bestSellItem = res.bestSellItemObj
+    })
+
+  }
+
   ngAfterViewInit() {
     if (typeof document !== 'undefined') {
       const productSwiper = new Swiper('.product-swiper', {

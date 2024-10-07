@@ -1,10 +1,12 @@
 <div id="blog" class="padding-large">
   <div class="container">
     <div class="row flex-row-reverse g-md-5">
+
+
       <main class="col-md-9 mb-4 mb-md-0">
         <div class="filter-blog d-flex flex-wrap justify-content-between mb-4">
           <div class="showing-product">
-            <p>Showing 1-9 of 55 results</p>
+            <p>Showing {{ (pageIndex * pageSize) + 1 }}–{{ getEndIndex() }} of {{ totalItems }} results</p>
           </div>
           <div class="sort-by">
             <select id="sorting" class="form-select" data-filter-sort="" data-filter-order="">
@@ -18,37 +20,52 @@
             </select>
           </div>
         </div>
+
         <div class="row post-contents">
 
-          @for (item of mainDataObj; track $index)
-          {
-          <div class="col-lg-4 col-md-6 posts mb-5">
-            <img src="{{item.imgPath}}" alt="post image" class="img-fluid rounded-3">
-            <a href="blog.html" class="fs-6 text-primary">Books</a>
-            <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">{{item.bookTitle}}</a></h4>
-            <p class="mb-2">{{item.bookDescription}}<span><a class="text-decoration-underline text-black-50"
-                  href="single-post.html">Read More</a></span>
-            </p>
-          </div>
-          }
+          <ng-container *ngFor="let item of paginatedItems; let i = index">
 
+            <div class="col-lg-4 col-md-6 posts mb-5">
+              <img src="{{item.imgPath}}" alt="post image" class="img-fluid rounded-3">
+              <a href="blog.html" class="fs-6 text-primary">Books</a>
+              <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">{{item.bookTitle}}</a>
+              </h4>
+              <p class="mb-2">{{item.bookDescription}}<span><a class="text-decoration-underline text-black-50"
+                    href="single-post.html">Read More</a></span>
+              </p>
+            </div>
+          </ng-container>
         </div>
-        <nav class="pt-5" aria-label="Page navigation">
+        <nav class="py-5" aria-label="Page navigation">
           <ul class="pagination justify-content-center gap-4">
-            <li class="page-item disabled">
-              <a class="page-link">Prev</a>
+            <li class="page-item" [class.disabled]="pageIndex === 0">
+              <a class="page-link" (click)="onPageChange(pageIndex - 1)" [attr.aria-disabled]="pageIndex === 0">Prev</a>
             </li>
-            <li class="page-item active" aria-current="page">
-              <span class="page-link">1</span>
+            <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
+              [class.active]="i === pageIndex">
+              <a class="page-link" (click)="onPageChange(i)">{{ i + 1 }}</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
+            <li class="page-item" [class.disabled]="pageIndex === totalPages - 1">
+              <a class="page-link" (click)="onPageChange(pageIndex + 1)"
+                [attr.aria-disabled]="pageIndex === totalPages - 1">Next</a>
             </li>
           </ul>
         </nav>
+
+
+
       </main>
+
+
+
+
+
+
+
+
+
+
+
       <aside class="col-md-3">
         <div class="sidebar">
           <div class="widget-menu">

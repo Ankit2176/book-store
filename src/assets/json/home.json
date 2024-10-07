@@ -65,7 +65,28 @@
     }
   ],
 
-  "bestReviewedObj ": [
+  "FeaturedObj": [
+    {
+      "Image": "assets/images/product-item2.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item1.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item3.png",
+      "Head": "The Crystal Key",
+      "Name": "Lauren Asher",
+      "price": "890"
+    }
+  ],
+
+  "bestReviewedObj": [
     {
       "Image": "assets/images/product-item7.png",
       "Head": "The Crystal Key",
@@ -83,6 +104,173 @@
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
       "price": "890"
+    }
+  ],
+
+  "LatestItemObj": [
+    {
+      "Image": "assets/images/product-item5.png",
+      "Head": "Whispering Winds",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item6.png",
+      "Head": "The Forgotten Realm",
+      "Name": "Lauren Asher",
+      "price": "890"
+    },
+    {
+      "Image": "assets/images/product-item7.png",
+      "Head": "Moonlit Secrets",
+      "Name": "Lauren Asher",
+      "price": "890"
+    }
+  ],
+
+  "OnSaleObj": [
+    {
+      "Image": "assets/images/product-item10.png",
+      "Head": "The Phoenix Chronicles",
+      "Name": "Lauren Asher",
+      "oldprice": "1666",
+      "price": "999"
+    },
+    {
+      "Image": "assets/images/product-item11.png",
+      "Head": "Dreams of Avalon",
+      "Name": "Lauren Asher",
+      "oldprice": "500",
+      "price": "410"
+    },
+    {
+      "Image": "assets/images/product-item12.png",
+      "Head": "Legends of the Dragon Isles",
+      "Name": "Lauren Asher",
+      "oldprice": "600",
+      "price": "500"
+    }
+  ],
+
+  "bestSellItemObj": [
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item1.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item2.png",
+      "Head": "Story of Success",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item3.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item4.png",
+      "Head": "The Dirty and Dead",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item5.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item6.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item5.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item6.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item5.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item6.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item5.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item6.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
+    }
+  ],
+
+  "BillBoardObj": [
+    {
+      "Image": "assets/images/banner-image2.png",
+      "Head": "The Fine Print Book Collection",
+      "Pera": "Best Offer Save 30%. Grab it now!"
+    },
+    {
+      "Image": "assets/images/banner-image1.png",
+      "Head": "How Innovation works",
+      "Pera": "Discount available. Grab it now!"
+    },
+    {
+      "Image": "assets/images/banner-image.png",
+      "Head": "Your Heart is the Sea",
+      "Pera": "Limited stocks available. Grab it now!"
+    },
+    {
+      "Image": "assets/images/banner-image.png",
+      "Head": "Your Heart is the Sea",
+      "Pera": "Limited stocks available. Grab it now!"
     }
   ]
 }

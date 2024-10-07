@@ -9,10 +9,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 export class LimitedOfferComponent
 //  implements OnInit, OnDestroy 
 
- {
+{
 
   countdown: any;
-  endTime: string = new Date(Date.now() + 7 * 60 * 60 * 1000).toISOString(); // Set to 24 hours from now
+  endTime: string = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(); // Set to 24 hours from now
 
   days: string = '0';
   hours: string = '00';
@@ -30,7 +30,7 @@ export class LimitedOfferComponent
   // }
 
   // private getTimeRemaining(endtime: string) {
-  
+
   //   const total = Date.parse(endtime) - Date.parse(new Date().toString());
   //   const seconds = Math.floor((total / 1000) % 60);
   //   const minutes = Math.floor((total / 1000 / 60) % 60);

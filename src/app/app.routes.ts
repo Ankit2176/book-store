@@ -11,11 +11,15 @@ import { HomeLayoutComponent } from './home/home-layout/home-layout.component';
 
 export const routes: Routes = [
 
- 
+
   {
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: '',
+        component: HomeLayoutComponent
+      },
       {
         path: 'home',
         component: HomeLayoutComponent
