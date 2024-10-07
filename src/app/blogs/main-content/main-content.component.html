@@ -7,10 +7,7 @@
         <div class="filter-blog d-flex flex-wrap justify-content-between mb-4">
           <div class="showing-product">
             <p>Showing {{ (pageIndex * pageSize) + 1 }}–{{ getEndIndex() }} of {{ totalItems }} results</p>
-<<<<<<< HEAD
-=======
-
->>>>>>> master
+            <<<<<<< HEAD=======>>>>>>> master
           </div>
           <div class="sort-by">
             <select id="sorting" class="form-select" (change)="onSortChange($event)">
@@ -27,21 +24,6 @@
         <div class="row post-contents">
 
           <ng-container *ngFor="let item of paginatedItems; let i = index">
-<<<<<<< HEAD
-=======
-
-            <div class="col-lg-4 col-md-6 posts mb-5">
-              <img src="{{item.imgPath}}" alt="post image" class="img-fluid rounded-3">
-              <a href="blog.html" class="fs-6 text-primary">Books</a>
-              <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">{{item.bookTitle}}</a>
-              </h4>
-              <p class="mb-2">{{item.bookDescription}}<span><a class="text-decoration-underline text-black-50"
-                    href="single-post.html">Read More</a></span>
-              </p>
-            </div>
-
-          </ng-container>
->>>>>>> master
 
             <div class="col-lg-4 col-md-6 posts mb-5">
               <img src="{{item.imgPath}}" alt="post image" class="img-fluid rounded-3">
@@ -54,10 +36,6 @@
             </div>
           </ng-container>
         </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> master
         <nav class="py-5" aria-label="Page navigation">
           <ul class="pagination justify-content-center gap-4">
             <li class="page-item" [class.disabled]="pageIndex === 0">
@@ -74,11 +52,6 @@
           </ul>
         </nav>
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master
       </main>
 
 
@@ -91,12 +64,9 @@
 
 
 
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> master
       <aside class="col-md-3">
         <div class="sidebar">
           <div class="widget-menu">
