@@ -93,8 +93,24 @@
       "Offer": "10% off",
       "Image": "assets/images/product-item12.png",
       "Head": "The Dirty and Dead",
-      "Name": "Lauren Asher",
+      "Name": "JLauren Asher",
+      "Price": "1870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "GLauren Asher",
       "Price": "870"
+    },
+    {
+      "Display": "",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item12.png",
+      "Head": "The Dirty and Dead",
+      "Name": "uren Asher",
+      "Price": "8709"
     },
     {
       "Display": "",
@@ -109,32 +125,16 @@
       "Offer": "10% off",
       "Image": "assets/images/product-item12.png",
       "Head": "The Dirty and Dead",
-      "Name": "Lauren Asher",
-      "Price": "870"
+      "Name": "ren Asher",
+      "Price": "70"
     },
     {
       "Display": "",
       "Offer": "10% off",
       "Image": "assets/images/product-item12.png",
       "Head": "The Dirty and Dead",
-      "Name": "Lauren Asher",
-      "Price": "870"
-    },
-    {
-      "Display": "",
-      "Offer": "10% off",
-      "Image": "assets/images/product-item12.png",
-      "Head": "The Dirty and Dead",
-      "Name": "Lauren Asher",
-      "Price": "870"
-    },
-    {
-      "Display": "",
-      "Offer": "10% off",
-      "Image": "assets/images/product-item12.png",
-      "Head": "The Dirty and Dead",
-      "Name": "Lauren Asher",
-      "Price": "870"
+      "Name": "auren Asher",
+      "Price": "87"
     }
   ]
 }
