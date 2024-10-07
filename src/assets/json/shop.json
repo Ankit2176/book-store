@@ -1,12 +1,12 @@
 {
   "ShopObj": [
     {
-        "Display": "d-none",
-        "Offer": "10% off",
-        "Image": "assets/images/product-item1.png",
-        "Head": "Blood on the Snow",
-        "Name": "Lauren Asher",
-        "Price": "870"
+      "Display": "d-none",
+      "Offer": "10% off",
+      "Image": "assets/images/product-item1.png",
+      "Head": "Blood on the Snow",
+      "Name": "Lauren Asher",
+      "Price": "870"
     },
     {
       "Display": "",
@@ -22,7 +22,7 @@
       "Image": "assets/images/product-item3.png",
       "Head": "Blood on the Snow",
       "Name": "Lauren Asher",
-      "Price": "870"
+      "Price": "260"
     },
     {
       "Display": "",
@@ -30,7 +30,7 @@
       "Image": "assets/images/product-item4.png",
       "Head": "The Dirty and Dead",
       "Name": "Lauren Asher",
-      "Price": "870"
+      "Price": "1005"
     },
     {
       "Display": "d-none",
@@ -38,7 +38,7 @@
       "Image": "assets/images/product-item5.png",
       "Head": "Blood on the Snow",
       "Name": "Lauren Asher",
-      "Price": "870"
+      "Price": "800"
     },
     {
       "Display": "",
@@ -46,7 +46,7 @@
       "Image": "assets/images/product-item6.png",
       "Head": "Blood on the Snow",
       "Name": "Lauren Asher",
-      "Price": "870"
+      "Price": "1150"
     },
     {
       "Display": "d-none",
@@ -54,7 +54,7 @@
       "Image": "assets/images/product-item7.png",
       "Head": "Life Flight",
       "Name": "Lauren Asher",
-      "Price": "870"
+      "Price": "1050"
     },
     {
       "Display": "",

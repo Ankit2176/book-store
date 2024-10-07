@@ -3,6 +3,7 @@
     <p>Showing {{ (pageIndex * pageSize) + 1 }}–{{ getEndIndex() }} of {{ totalItems }} results</p>
   </div>
 
+
   <div class="sort-by">
     <select id="sorting" class="form-select" (change)="onSortChange($event)">
       <option value="">Default sorting</option>
@@ -49,11 +50,8 @@
         </div>
         <span class="price text-primary fw-bold mb-2 fs-5">${{ item.Price }}</span>
         <div class="card-concern position-absolute start-0 end-0 d-flex gap-2">
-          <button type="button" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
-            data-bs-title="Tooltip on top">
-            <svg class="cart">
-              <use xlink:href="#cart"></use>
-            </svg>
+          <button type="button" class="btn btn-dark" (click)="addToCart(item)" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Tooltip on top">
+            <svg class="cart"><use xlink:href="#cart"></use></svg>
           </button>
           <a href="#" class="btn btn-dark">
             <span><svg class="wishlist">
