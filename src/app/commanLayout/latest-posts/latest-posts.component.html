@@ -4,7 +4,7 @@
       class="section-title d-md-flex justify-content-between align-items-center mb-4"
     >
       <h3 class="d-flex align-items-center">Latest posts</h3>
-      <a href="shop.html" class="btn">View All</a>
+      <a  [routerLink]="['/blog']" class="btn">View All</a>
     </div>
     <div class="row">
      @for(item of LatestPostObj ;track $index){ 
