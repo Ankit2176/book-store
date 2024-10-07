@@ -1,10 +1,11 @@
+import { RouterLink } from '@angular/router';
 import { HomeService } from './../../services/home/home.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-latest-posts',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './latest-posts.component.html',
   styleUrl: './latest-posts.component.css'
 })

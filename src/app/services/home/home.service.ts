@@ -9,6 +9,6 @@ export class HomeService {
 
 
   getData() {
-    return this.http.get<any>("assets/json/home.json")
+    return this.http.get("assets/json/home.json")
   }
 }

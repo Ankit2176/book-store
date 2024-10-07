@@ -23,6 +23,7 @@ export class BestReviewedComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    debugger;
 
     this.Services.getData().subscribe((res: any) => {
       debugger;

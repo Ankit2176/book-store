@@ -23,9 +23,9 @@ export class CatogeriesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger;
+
     this.Services.getData().subscribe((res: any) => {
-      debugger;
+      
       this.CatogObj = res.CatogObj
     })
 

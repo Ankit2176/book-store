@@ -2,19 +2,23 @@
   <div class="section-title overflow-hidden mb-5 mt-2">
     <h3 class="d-flex flex-column mb-0">On sale</h3>
   </div>
+
+
   <div class="items-lists">
+  @for (item of OnSaleObj; track $index) {
+
     <div class="item d-flex">
       <img
-        src="assets/images/product-item10.png"
+        src="{{item.Image}}"
         class="img-fluid shadow-sm"
         alt="product item"
       />
       <div class="item-content ms-3">
         <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">The Phoenix Chronicles</a>
+          <a href="single-product.html">{{item.Head}}</a>
         </h6>
         <div class="review-content d-flex">
-          <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
+          <p class="my-2 me-2 fs-6 text-black-50">{{item.Name}}</p>
           <div class="rating text-warning d-flex align-items-center">
             <svg class="star star-fill">
               <use xlink:href="#star-fill"></use>
@@ -34,81 +38,85 @@
           </div>
         </div>
         <span class="price text-primary fw-bold mb-2 fs-5"
-          ><s class="text-black-50">$1666</s> $999</span
+          ><s class="text-black-50">${{item.oldprice}}</s> ${{item.price}}</span
         >
       </div>
     </div>
     <hr class="gray-400" />
-    <div class="item d-flex">
-      <img
-        src="assets/images/product-item11.png"
-        class="img-fluid shadow-sm"
-        alt="product item"
-      />
-      <div class="item-content ms-3">
-        <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">Dreams of Avalon</a>
-        </h6>
-        <div class="review-content d-flex">
-          <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-          <div class="rating text-warning d-flex align-items-center">
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
+
+  }
+
+      <!-- <div class="item d-flex">
+        <img
+          src="assets/images/product-item11.png"
+          class="img-fluid shadow-sm"
+          alt="product item"
+        />
+        <div class="item-content ms-3">
+          <h6 class="mb-0 fw-bold">
+            <a href="single-product.html">Dreams of Avalon</a>
+          </h6>
+          <div class="review-content d-flex">
+            <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
+            <div class="rating text-warning d-flex align-items-center">
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+            </div>
           </div>
+          <span class="price text-primary fw-bold mb-2 fs-5"
+            ><s class="text-black-50">$500</s> $410</span
+          >
         </div>
-        <span class="price text-primary fw-bold mb-2 fs-5"
-          ><s class="text-black-50">$500</s> $410</span
-        >
       </div>
-    </div>
-    <hr />
-    <div class="item d-flex">
-      <img
-        src="assets/images/product-item12.png"
-        class="img-fluid shadow-sm"
-        alt="product item"
-      />
-      <div class="item-content ms-3">
-        <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">Legends of the Dragon Isles</a>
-        </h6>
-        <div class="review-content d-flex">
-          <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-          <div class="rating text-warning d-flex align-items-center">
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
+      <hr />
+      <div class="item d-flex">
+        <img
+          src="assets/images/product-item12.png"
+          class="img-fluid shadow-sm"
+          alt="product item"
+        />
+        <div class="item-content ms-3">
+          <h6 class="mb-0 fw-bold">
+            <a href="single-product.html">Legends of the Dragon Isles</a>
+          </h6>
+          <div class="review-content d-flex">
+            <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
+            <div class="rating text-warning d-flex align-items-center">
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+              <svg class="star star-fill">
+                <use xlink:href="#star-fill"></use>
+              </svg>
+            </div>
           </div>
+          <span class="price text-primary fw-bold mb-2 fs-5"
+            ><s class="text-black-50">$600</s> $500</span
+          >
         </div>
-        <span class="price text-primary fw-bold mb-2 fs-5"
-          ><s class="text-black-50">$600</s> $500</span
-        >
-      </div>
-    </div>
+      </div> -->
+
   </div>
 </div>
