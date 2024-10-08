@@ -136,8 +136,9 @@
             <div class="product-quantity my-2 my-2">
               <div class="input-group product-qty align-items-center" style="max-width: 150px">
                 <span class="input-group-btn">
-                  <button type="button" (click)="decreaseQuantity($index)" class="bg-white shadow border rounded-3 fw-light quantity-left-minus"
-                    data-type="minus" data-field="">
+                  <button type="button" (click)="decreaseQuantity($index)"
+                    class="bg-white shadow border rounded-3 fw-light quantity-left-minus" data-type="minus"
+                    data-field="">
                     <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -149,12 +150,14 @@
                     </svg>
                   </button>
                 </span>
-                <input type="text" [value]="item.quantity || 1" (input)="updateQuantity($index, $event)" id="quantity" name="quantity"
+                <input type="text" [value]="item.quantity || 1" (input)="updateQuantity($index, $event)" id="quantity"
+                  name="quantity"
                   class="form-control bg-white shadow border rounded-3 py-2 mx-2 input-number text-center" value="1"
                   min="1" max="100" required="" />
                 <span class="input-group-btn">
-                  <button type="button" (click)="increaseQuantity($index)" class="bg-white shadow border rounded-3 fw-light quantity-right-plus"
-                    data-type="plus" data-field="">
+                  <button type="button" (click)="increaseQuantity($index)"
+                    class="bg-white shadow border rounded-3 fw-light quantity-right-plus" data-type="plus"
+                    data-field="">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                       <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>

@@ -21,8 +21,6 @@
     </div>
     <div class="swiper product-swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
       <div class="swiper-wrapper" id="swiper-wrapper-7ce12c7463863455" aria-live="polite">
-
-
         @for (item of bestSellItem; track $index) {
         <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6"
           style="width: 287.2px; margin-right: 20px;">
@@ -63,7 +61,7 @@
                   <use xlink:href="#cart"></use>
                 </svg>
               </button>
-              <a href="#" class="btn btn-dark">
+              <a (click)="addToWishlist(item)" class="btn btn-dark">
                 <span>
                   <svg class="wishlist">
                     <use xlink:href="#heart"></use>

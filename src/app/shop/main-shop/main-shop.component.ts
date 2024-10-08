@@ -22,7 +22,6 @@ export class MainShopComponent implements OnInit {
   constructor(private Services: ShopService) { }
 
   ngOnInit(): void {
-    debugger;
     this.Services.getData().subscribe((res: any) => {
       this.ShopObj = res.ShopObj;
       this.totalItems = this.ShopObj.length;
@@ -31,16 +30,9 @@ export class MainShopComponent implements OnInit {
   }
 
   addToCart(item: any) {
-    // Retrieve the existing cart data from local storage
     const existingCart = localStorage.getItem('cart');
-
-    // Parse the existing cart data or initialize an empty array if none exists
     this.cartDataObj = existingCart ? JSON.parse(existingCart) : [];
-
-    // Add the new item to the cart array
     this.cartDataObj.push(item);
-
-    // Save the updated cart back to local storage
     localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
   }
 

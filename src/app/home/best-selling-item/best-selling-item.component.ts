@@ -16,6 +16,7 @@ import { RouterLink } from '@angular/router';
 export class BestSellingItemComponent implements AfterViewInit {
   bestSellItem: any;
   cartDataObj: any[] = [];
+  wishlistCount: any[] = [];
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -59,5 +60,12 @@ export class BestSellingItemComponent implements AfterViewInit {
     this.cartDataObj = existingCart ? JSON.parse(existingCart) : [];
     this.cartDataObj.push(item);
     localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
+  }
+
+  addToWishlist(item: any) {
+    const existingWishlist = localStorage.getItem('wishlistProducts');
+    this.cartDataObj = existingWishlist ? JSON.parse(existingWishlist) : [];
+    this.cartDataObj.push(item);
+    localStorage.setItem('wishlistProducts', JSON.stringify(this.cartDataObj));
   }
 }
