@@ -27,6 +27,6 @@ export class SearchPopupComponent {
     if (event.key === 'Escape') {
       this.closePopup();
     }
-}
+  }
 
 }

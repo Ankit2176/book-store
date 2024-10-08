@@ -70,19 +70,19 @@
       "Image": "assets/images/product-item2.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item1.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item3.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     }
   ],
 
@@ -91,19 +91,19 @@
       "Image": "assets/images/product-item7.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item8.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item9.png",
       "Head": "The Crystal Key",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     }
   ],
 
@@ -112,19 +112,19 @@
       "Image": "assets/images/product-item5.png",
       "Head": "Whispering Winds",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item6.png",
       "Head": "The Forgotten Realm",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     },
     {
       "Image": "assets/images/product-item7.png",
       "Head": "Moonlit Secrets",
       "Name": "Lauren Asher",
-      "price": "890"
+      "Price": "890"
     }
   ],
 
@@ -134,21 +134,21 @@
       "Head": "The Phoenix Chronicles",
       "Name": "Lauren Asher",
       "oldprice": "1666",
-      "price": "999"
+      "Price": "999"
     },
     {
       "Image": "assets/images/product-item11.png",
       "Head": "Dreams of Avalon",
       "Name": "Lauren Asher",
       "oldprice": "500",
-      "price": "410"
+      "Price": "410"
     },
     {
       "Image": "assets/images/product-item12.png",
       "Head": "Legends of the Dragon Isles",
       "Name": "Lauren Asher",
       "oldprice": "600",
-      "price": "500"
+      "Price": "500"
     }
   ],
 

@@ -3,11 +3,12 @@ import { ShopService } from '../../services/shop/shop.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { AsideShopComponent } from '../aside-shop/aside-shop.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-shop',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './main-shop.component.html',
   styleUrl: './main-shop.component.css'
 })
@@ -18,6 +19,8 @@ export class MainShopComponent implements OnInit {
   pageIndex: number = 0;
   totalItems: number = 0;
   cartDataObj: any[] = [];
+
+  singleProductObj: any[] = [];
   sortKey: string = '';
   sortOrder: string = 'asc';
 
@@ -28,7 +31,7 @@ export class MainShopComponent implements OnInit {
   constructor(private Services: ShopService) { }
 
   ngOnInit(): void {
-  
+
     this.Services.getData().subscribe((res: any) => {
       this.ShopObj = res.ShopObj;
       this.totalItems = this.ShopObj.length;
@@ -37,35 +40,39 @@ export class MainShopComponent implements OnInit {
   }
 
   addToCart(item: any) {
-    // Retrieve the existing cart data from local storage
     const existingCart = localStorage.getItem('cart');
 
-    // Parse the existing cart data or initialize an empty array if none exists
     this.cartDataObj = existingCart ? JSON.parse(existingCart) : [];
 
-    // Add the new item to the cart array
     this.cartDataObj.push(item);
 
-    // Save the updated cart back to local storage
     localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
   }
+
+
+  // for single product redirection
+  goToView(item: any) {
+    this.singleProductObj = [];
+
+    this.singleProductObj.push(item);
+
+    localStorage.setItem('singleProduct', JSON.stringify(this.singleProductObj));
+  }
+
+
 
 
   updatePaginatedItems() {
     const startIndex = this.pageIndex * this.pageSize;
 
-    // First, filter the items by search term
     let filteredItems = this.ShopObj.filter(item =>
       item.Head.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
 
-    // Then, sort the filtered items
     let sortedItems = this.sortItems(filteredItems);
 
-    // Finally, paginate the sorted and filtered items
     this.paginatedItems = sortedItems.slice(startIndex, startIndex + this.pageSize);
 
-    // Update totalItems to reflect the filtered items count
     this.totalItems = filteredItems.length;
   }
 

@@ -24,11 +24,12 @@
 
             <div class="col-lg-4 col-md-6 posts mb-5">
               <img src="{{item.imgPath}}" alt="post image" class="img-fluid rounded-3">
-              <a href="blog.html" class="fs-6 text-primary">Books</a>
-              <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">{{item.bookTitle}}</a>
+              <a [routerLink]="['/singlePost']" (click)="goToView(item)" class="fs-6 text-primary">Books</a>
+              <h4 class="card-title mb-2 text-capitalize text-dark"><a [routerLink]="['/singlePost']"
+                  (click)="goToView(item)">{{item.bookTitle}}</a>
               </h4>
               <p class="mb-2">{{item.bookDescription}}<span><a class="text-decoration-underline text-black-50"
-                    href="single-post.html">Read More</a></span>
+                    [routerLink]="['/singlePost']" (click)="goToView(item)">Read More</a></span>
               </p>
             </div>
 
@@ -57,23 +58,13 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
       <aside class="col-md-3">
         <div class="sidebar">
           <div class="widget-menu">
             <div class="widget-search-bar">
               <form class="d-flex border rounded-3 p-2" role="search">
 
-                <input class="form-control border-0 me-2 py-2" type="search"  placeholder="Search" aria-label="Search">
+                <input class="form-control border-0 me-2 py-2" type="search" placeholder="Search" aria-label="Search">
 
                 <button class="btn rounded-3 p-3 d-flex align-items-center" type="submit">
 

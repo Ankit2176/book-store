@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { HomeService } from '../../../services/home/home.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-on-sale',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './on-sale.component.html',
   styleUrl: './on-sale.component.css'
 })
@@ -32,4 +33,15 @@ export class OnSaleComponent {
     })
 
   }
+
+  
+  singleProductObj:any[]=[]
+
+  goToView(item: any) {
+    this.singleProductObj = [];
+
+    this.singleProductObj.push(item);
+
+    localStorage.setItem('singleProduct', JSON.stringify(this.singleProductObj));
+}
 }

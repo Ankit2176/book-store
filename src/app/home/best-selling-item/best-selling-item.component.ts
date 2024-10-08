@@ -18,6 +18,8 @@ import { RouterLink } from '@angular/router';
 export class BestSellingItemComponent implements AfterViewInit {
 
   bestSellItem: any
+  singleProductObj: any[] = [];
+
   /**
    *
    */
@@ -61,4 +63,13 @@ export class BestSellingItemComponent implements AfterViewInit {
       });
     }
   }
+
+  goToView(item: any) {
+    this.singleProductObj = [];
+
+    this.singleProductObj.push(item);
+
+    localStorage.setItem('singleProduct', JSON.stringify(this.singleProductObj));
+  }
+
 }
