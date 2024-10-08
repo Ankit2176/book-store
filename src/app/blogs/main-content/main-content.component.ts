@@ -14,11 +14,14 @@ export class MainContentComponent implements OnInit {
 
   mainDataObj: any[] = [];
   paginatedItems: any[] = [];
-  pageSize: number = 6; // Items per page
-  pageIndex: number = 0; // Current page index
-  totalItems: number = 0; // Total number of items
-  sortKey: string = ''; // Sorting key (like bookTitle, Model)
-  sortOrder: string = 'asc'; // Sorting order (asc or desc)
+  pageSize: number = 6;
+  pageIndex: number = 0;
+  totalItems: number = 0;
+  sortKey: string = '';
+  sortOrder: string = 'asc';
+
+
+  singlePostObj: any[] = [];
 
   constructor(private service: BlogService) { }
 
@@ -30,17 +33,16 @@ export class MainContentComponent implements OnInit {
     });
   }
 
-  // Method to update paginated items after sorting or page change
   updatePaginatedItems() {
     const startIndex = this.pageIndex * this.pageSize;
     let sortedItems = this.sortItems(this.mainDataObj);
     this.paginatedItems = sortedItems.slice(startIndex, startIndex + this.pageSize);
   }
 
-  // Sorting method
+
   sortItems(items: any[]): any[] {
     if (this.sortKey === '') {
-      return items; // No sorting if sortKey is empty
+      return items;
     }
 
     return items.sort((a, b) => {
@@ -55,11 +57,9 @@ export class MainContentComponent implements OnInit {
     });
   }
 
-  // Called when sorting option changes
   onSortChange(event: any) {
     const value = event.target.value;
 
-    // Determine sorting criteria based on dropdown selection
     if (value.includes('bookTitle')) {
       this.sortKey = 'bookTitle';
     } else if (value.includes('Price')) {
@@ -67,7 +67,7 @@ export class MainContentComponent implements OnInit {
     } else if (value.includes('Model')) {
       this.sortKey = 'Model';
     } else {
-      this.sortKey = ''; // Default: No sorting
+      this.sortKey = '';
     }
 
     this.sortOrder = value.includes('Z - A') || value.includes('High') || value.includes('Lowest') ? 'desc' : 'asc';
@@ -86,4 +86,16 @@ export class MainContentComponent implements OnInit {
   getEndIndex(): number {
     return Math.min((this.pageIndex + 1) * this.pageSize, this.totalItems);
   }
+
+
+
+
+  goToView(item: any) {
+    this.singlePostObj = [];
+
+    this.singlePostObj.push(item);
+
+    localStorage.setItem('singlePostData', JSON.stringify(this.singlePostObj));
+  }
+
 }

@@ -9,7 +9,7 @@ import { DOCUMENT } from '@angular/common';
   standalone: true,
   templateUrl: './customer-reviews.component.html',
   styleUrls: ['./customer-reviews.component.css'] // Updated from styleUrl to styleUrls
-})  
+})
 export class CustomerReviewsComponent implements OnInit, AfterViewInit {
 
   CusReviewsObj: any;

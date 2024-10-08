@@ -1,17 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart/cart.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart-table',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './cart-table.component.html',
   styleUrl: './cart-table.component.css'
 })
-export class CartTableComponent implements OnInit{
+export class CartTableComponent implements OnInit {
 
-  constructor(private service: CartService ) {}
+  constructor(private service: CartService) { }
 
   cartDataObj: any[] = [];
 
@@ -31,7 +32,6 @@ export class CartTableComponent implements OnInit{
   }
 
   decreaseQuantity(index: number) {
-    debugger
     if (this.cartDataObj[index].quantity > 1) {
       this.cartDataObj[index].quantity--;
     }
@@ -44,7 +44,7 @@ export class CartTableComponent implements OnInit{
     if (!isNaN(value) && value > 0) {
       this.cartDataObj[index].quantity = value;
     } else {
-      // Reset to 1 if invalid input
+
       this.cartDataObj[index].quantity = 1;
     }
   }
@@ -55,15 +55,14 @@ export class CartTableComponent implements OnInit{
 
   getSubtotal(): number {
     return this.cartDataObj.reduce((total, item) => {
-      return total + (item.Price * (item.quantity || 1)); // Multiply price by quantity
+      return total + (item.Price * (item.quantity || 1));
     }, 0);
   }
 
   removeFromCart(index: number) {
-    // Remove the item from the cart array
+
     this.cartDataObj.splice(index, 1);
 
-    // Update local storage
     localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
   }
 

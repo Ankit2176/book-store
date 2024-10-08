@@ -1,23 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ShopService } from '../../services/shop/shop.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { AsideShopComponent } from '../aside-shop/aside-shop.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-main-shop',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, RouterLink],
   templateUrl: './main-shop.component.html',
   styleUrl: './main-shop.component.css'
 })
 export class MainShopComponent implements OnInit {
   ShopObj: any[] = [];
   paginatedItems: any[] = [];
-  pageSize: number = 8; // Number of items per page
-  pageIndex: number = 0; // Current page index
-  totalItems: number = 0; // Total number of items
+  pageSize: number = 8;
+  pageIndex: number = 0;
+  totalItems: number = 0;
   cartDataObj: any[] = [];
-  sortKey: string = ''; // Sorting key
-  sortOrder: string = 'asc'; // Sorting order
+
+  singleProductObj: any[] = [];
+  sortKey: string = '';
+  sortOrder: string = 'asc';
+
+  searchTerm: string = '';
+
+
 
   constructor(private Services: ShopService) { }
 
@@ -36,17 +45,37 @@ export class MainShopComponent implements OnInit {
     localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
   }
 
-  // Method to update paginated items after sorting or page change
-  updatePaginatedItems() {
-    const startIndex = this.pageIndex * this.pageSize;
-    let sortedItems = this.sortItems(this.ShopObj);
-    this.paginatedItems = sortedItems.slice(startIndex, startIndex + this.pageSize);
+
+  // for single product redirection
+  goToView(item: any) {
+    this.singleProductObj = [];
+
+    this.singleProductObj.push(item);
+
+    localStorage.setItem('singleProduct', JSON.stringify(this.singleProductObj));
   }
 
-  // Sorting method
+
+
+
+  updatePaginatedItems() {
+    const startIndex = this.pageIndex * this.pageSize;
+
+    let filteredItems = this.ShopObj.filter(item =>
+      item.Head.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+
+    let sortedItems = this.sortItems(filteredItems);
+
+    this.paginatedItems = sortedItems.slice(startIndex, startIndex + this.pageSize);
+
+    this.totalItems = filteredItems.length;
+  }
+
+
   sortItems(items: any[]): any[] {
     if (this.sortKey === '') {
-      return items; // No sorting if sortKey is empty
+      return items;
     }
 
     return items.sort((a, b) => {
@@ -61,7 +90,6 @@ export class MainShopComponent implements OnInit {
     });
   }
 
-  // Called when sorting option changes
   onSortChange(event: any) {
     const value = event.target.value;
 

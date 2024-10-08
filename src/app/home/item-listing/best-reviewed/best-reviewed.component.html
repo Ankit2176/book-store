@@ -6,14 +6,10 @@
   <div class="items-lists">
     @for(item of bestReviewedObj ;track $index){
     <div class="item d-flex">
-      <img
-        src="{{ item.Image }}"
-        class="img-fluid shadow-sm"
-        alt="product item"
-      />
+      <img src="{{ item.Image }}" class="img-fluid shadow-sm" alt="product item" />
       <div class="item-content ms-3">
         <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">{{ item.Head }}</a>
+          <a [routerLink]="['/singlePage']" (click)="goToView(item)">{{ item.Head }}</a>
         </h6>
         <div class="review-content d-flex">
           <p class="my-2 me-2 fs-6 text-black-50">{{ item.Name }}</p>
@@ -35,81 +31,11 @@
             </svg>
           </div>
         </div>
-        <span class="price text-primary fw-bold mb-2 fs-5"
-          >${{ item.price }}</span
-        >
+        <span class="price text-primary fw-bold mb-2 fs-5">${{ item.Price }}</span>
       </div>
     </div>
     <hr class="gray-400" />
     }
 
-    <!-- 
-    <div class="item d-flex">
-      <img
-        src="assets/images/product-item8.png"
-        class="img-fluid shadow-sm"
-        alt="product item"
-      />
-      <div class="item-content ms-3">
-        <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">Starlight Sonata</a>
-        </h6>
-        <div class="review-content d-flex">
-          <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-          <div class="rating text-warning d-flex align-items-center">
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-          </div>
-        </div>
-        <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-      </div>
-    </div>
-    <hr />
-    <div class="item d-flex">
-      <img
-        src="assets/images/product-item9.png"
-        class="img-fluid shadow-sm"
-        alt="product item"
-      />
-      <div class="item-content ms-3">
-        <h6 class="mb-0 fw-bold">
-          <a href="single-product.html">Tales of the Enchanted Forest</a>
-        </h6>
-        <div class="review-content d-flex">
-          <p class="my-2 me-2 fs-6 text-black-50">Lauren Asher</p>
-          <div class="rating text-warning d-flex align-items-center">
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-            <svg class="star star-fill">
-              <use xlink:href="#star-fill"></use>
-            </svg>
-          </div>
-        </div>
-        <span class="price text-primary fw-bold mb-2 fs-5">$870</span>
-      </div>
-    </div> -->
   </div>
 </div>

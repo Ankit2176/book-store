@@ -1,7 +1,12 @@
 <section class="single-product padding-large">
   <div class="container">
     <div class="row">
+
+      @for (item of singleProductObj; track $index) {
+
       <div class="col-lg-6">
+
+
         <div class="d-flex gap-3 product-preview">
           <div
             class="swiper thumb-swiper w-50 swiper-initialized swiper-horizontal swiper-backface-hidden swiper-thumbs">
@@ -23,12 +28,13 @@
             </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
-          <div class="swiper large-swiper border rounded-3 overflow-hidden swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
+          <div
+            class="swiper large-swiper border rounded-3 overflow-hidden swiper-fade swiper-initialized swiper-horizontal swiper-watch-progress swiper-backface-hidden">
             <div class="swiper-wrapper" id="swiper-wrapper-1370e06e86cddba4" aria-live="polite">
-              <div class="swiper-slide bg-white swiper-slide-visible swiper-slide-fully-visible swiper-slide-active"
+              <div class="swiper-slide bg-white swiper-slide-visible swiper-slide-fully-visible swiper-slide-active p-5"
                 role="group" aria-label="1 / 3"
                 style="width: 604px; opacity: 1; transform: translate3d(0px, 0px, 0px);">
-                <img src="assets/images/product-large-1.png" alt="single-product" class="img-fluid">
+                <img src="{{item.Image}}" alt="single-product" class="img-fluid p-5 ">
               </div>
               <div class="swiper-slide bg-white swiper-slide-next" role="group" aria-label="2 / 3"
                 style="width: 604px; opacity: 0; transform: translate3d(-604px, 0px, 0px);">
@@ -43,12 +49,16 @@
           </div>
         </div>
       </div>
+
+
+
+
       <div class="col-lg-6">
         <div class="product-info ps-lg-5 pt-3 pt-lg-0">
           <div class="element-header">
-            <h1 class="product-title">The Emerald Crown</h1>
+            <h1 class="product-title">{{item.Head}}</h1>
             <div class="product-price d-flex align-items-center mt-2">
-              <span class="fs-2 fw-light text-primary me-2">$200</span>
+              <span class="fs-2 fw-light text-primary me-2">${{item.Price}}</span>
               <del>$260</del>
             </div>
             <div class="rating text-warning d-flex align-items-center mb-2">
@@ -112,7 +122,7 @@
                   <div class="input-group product-qty align-items-center" style="max-width: 150px;">
                     <span class="input-group-btn">
                       <button type="button" class="bg-white shadow border rounded-3 fw-light quantity-left-minus"
-                        data-type="minus" data-field="">
+                        data-type="minus" data-field="" (click)="decreaseQuantity($index)">
                         <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
                           xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -125,12 +135,13 @@
                         </svg>
                       </button>
                     </span>
-                    <input type="text" id="quantity" name="quantity"
+                    <input type="text" [value]="item.quantity || 1" (input)="updateQuantity($index, $event)"
+                      id="quantity" name="quantity"
                       class="form-control bg-white shadow border rounded-3 py-2 mx-2 input-number text-center" value="1"
                       min="1" max="100" required="">
                     <span class="input-group-btn">
                       <button type="button" class="bg-white shadow border rounded-3 fw-light quantity-right-plus"
-                        data-type="plus" data-field="">
+                        data-type="plus" data-field="" (click)="increaseQuantity($index)">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
@@ -147,7 +158,7 @@
             </div>
             <div class="action-buttons my-3 d-flex flex-wrap gap-3">
               <a href="#" class="btn">Order now</a>
-              <a href="#" class="btn btn-dark">Add to cart</a>
+              <a [routerLink]="['/cart']" class="btn btn-dark" (click)="addToCartProduct()">Add to cart</a>
               <a href="#" class="btn btn-dark">
                 <svg class="heart" width="21" height="21">
                   <use xlink:href="#heart"></use>
@@ -194,6 +205,7 @@
           </div>
         </div>
       </div>
+      }
     </div>
   </div>
 </section>

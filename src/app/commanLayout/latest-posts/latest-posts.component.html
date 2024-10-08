@@ -1,60 +1,24 @@
 <section id="latest-posts" class="padding-large">
   <div class="container">
-    <div
-      class="section-title d-md-flex justify-content-between align-items-center mb-4"
-    >
+    <div class="section-title d-md-flex justify-content-between align-items-center mb-4">
       <h3 class="d-flex align-items-center">Latest posts</h3>
-      <a  [routerLink]="['/blog']" class="btn">View All</a>
+      <a [routerLink]="['/blog']" class="btn">View All</a>
     </div>
     <div class="row">
-     @for(item of LatestPostObj ;track $index){ 
+      @for(item of LatestPostObj ;track $index){
       <div class="col-md-3 posts mb-4">
-        <img
-          src="{{ item.Image }}"
-          alt="post image"
-          class="img-fluid rounded-3"
-        />
-        <a href="blog.html" class="fs-6 text-primary">Books</a>
+        <img src="{{ item.Image }}" alt="post image" class="img-fluid rounded-3" />
+        <a [routerLink]="['/blog']" class="fs-6 text-primary">Books</a>
         <h4 class="card-title mb-2 text-capitalize text-dark">
-          <a href="single-post.html">{{ item.Head }}</a>
+          <a [routerLink]="['/singlePost']">{{ item.Head }}</a>
         </h4>
         <p class="mb-2">
           {{ item.Des }}
-          <span
-            ><a
-              class="text-decoration-underline text-black-50"
-              href="single-post.html"
-              >Read More</a
-            ></span
-          >
+          <span><a class="text-decoration-underline text-black-50" [routerLink]="['/singlePost']">Read More</a></span>
         </p>
       </div>
       }
 
-      <!-- <div class="col-md-3 posts mb-4">
-        <img src="assets/images/post-item2.jpg" alt="post image" class="img-fluid rounded-3">
-        <a href="blog.html" class="fs-6 text-primary">Books</a>
-        <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">The Fascinating Realm of Science Fiction</a></h4>
-        <p class="mb-2">Explore the intersection of technology and sustainability in our latest blog post. Learn about
-          the innovative <span><a class="text-decoration-underline text-black-50" href="single-post.html">Read More</a></span> </p>
-      </div>
-      <div class="col-md-3 posts mb-4">
-        <img src="assets/images/post-item3.jpg" alt="post image" class="img-fluid rounded-3">
-        <a href="blog.html" class="fs-6 text-primary">Books</a>
-        <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">Finding Love in the Pages of a Book</a></h4>
-        <p class="mb-2">Stay ahead of the curve with our insightful look into the rapidly evolving landscape of
-          wearable technology. <span><a class="text-decoration-underline text-black-50" href="single-post.html">Read More</a></span>
-        </p>
-      </div>
-      <div class="col-md-3 posts mb-4">
-        <img src="assets/images/post-item4.jpg" alt="post image" class="img-fluid rounded-3">
-        <a href="blog.html" class="fs-6 text-primary">Books</a>
-        <h4 class="card-title mb-2 text-capitalize text-dark"><a href="single-post.html">Reading for Mental Health: How Books Can Heal and Inspire</a></h4>
-        <p class="mb-2">In today's remote work environment, productivity is key. Discover the top apps and tools that
-          can help you stay <span><a class="text-decoration-underline text-black-50" href="single-post.html">Read More</a></span>
-        </p>
-      
-      </div> -->
     </div>
   </div>
 </section>

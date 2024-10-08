@@ -1,36 +1,60 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, Inject } from '@angular/core';
 import Swiper from 'swiper/bundle';
+import { HomeService } from '../../services/home/home.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-single-page-related-item',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './single-page-related-item.component.html',
   styleUrl: './single-page-related-item.component.css'
 })
 export class SinglePageRelatedItemComponent implements AfterViewInit {
 
+  bestSellItem: any
+  /**
+   *
+   */
+  constructor(@Inject(DOCUMENT) private document: Document, private Services: HomeService) {
+
+
+  }
+
+  ngOnInit(): void {
+
+
+    this.Services.getData().subscribe((res: any) => {
+
+      this.bestSellItem = res.bestSellItemObj
+    })
+
+  }
+
   ngAfterViewInit() {
-    const productSwiper = new Swiper('.product-swiper', {
-      spaceBetween: 20,
-      navigation: {
-        nextEl: '.product-slider-button-next',
-        prevEl: '.product-slider-button-prev',
-      },
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
+    if (typeof document !== 'undefined') {
+      const productSwiper = new Swiper('.product-swiper', {
+        spaceBetween: 20,
+        navigation: {
+          nextEl: '.product-slider-button-next',
+          prevEl: '.product-slider-button-prev',
         },
-        660: {
-          slidesPerView: 3,
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          660: {
+            slidesPerView: 3,
+          },
+          980: {
+            slidesPerView: 4,
+          },
+          1500: {
+            slidesPerView: 5,
+          },
         },
-        980: {
-          slidesPerView: 4,
-        },
-        1500: {
-          slidesPerView: 5,
-        },
-      },
-    });
+      });
+    }
   }
 }
