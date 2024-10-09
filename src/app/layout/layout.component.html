@@ -10,7 +10,7 @@
 
 <app-customer-reviews></app-customer-reviews>
 
-<app-latest-posts></app-latest-posts>
+<app-latest-posts *ngIf="!isBlogPage()"></app-latest-posts>
 
 <app-instagram></app-instagram>
 

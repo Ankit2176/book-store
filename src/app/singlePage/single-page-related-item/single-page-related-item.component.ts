@@ -9,27 +9,22 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink],
   templateUrl: './single-page-related-item.component.html',
-  styleUrl: './single-page-related-item.component.css'
+  styleUrl: './single-page-related-item.component.css',
 })
 export class SinglePageRelatedItemComponent implements AfterViewInit {
+  bestSellItem: any;
+  cartDataObj: any[] = [];
+  wishlistCount: any[] = [];
 
-  bestSellItem: any
-  /**
-   *
-   */
-  constructor(@Inject(DOCUMENT) private document: Document, private Services: HomeService) {
-
-
-  }
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private Services: HomeService
+  ) {}
 
   ngOnInit(): void {
-
-
     this.Services.getData().subscribe((res: any) => {
-
-      this.bestSellItem = res.bestSellItemObj
-    })
-
+      this.bestSellItem = res.bestSellItemObj;
+    });
   }
 
   ngAfterViewInit() {
@@ -56,5 +51,19 @@ export class SinglePageRelatedItemComponent implements AfterViewInit {
         },
       });
     }
+  }
+
+  addToCart(item: any) {
+    const existingCart = localStorage.getItem('cart');
+    this.cartDataObj = existingCart ? JSON.parse(existingCart) : [];
+    this.cartDataObj.push(item);
+    localStorage.setItem('cart', JSON.stringify(this.cartDataObj));
+  }
+
+  addToWishlist(item: any) {
+    const existingWishlist = localStorage.getItem('wishlistProducts');
+    this.cartDataObj = existingWishlist ? JSON.parse(existingWishlist) : [];
+    this.cartDataObj.push(item);
+    localStorage.setItem('wishlistProducts', JSON.stringify(this.cartDataObj));
   }
 }

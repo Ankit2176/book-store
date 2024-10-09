@@ -20,10 +20,7 @@ export class BestSellingItemComponent implements AfterViewInit {
   cartDataObj: any[] = [];
   wishlistCount: any[] = [];
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private Services: HomeService
-  ) {}
+  constructor(@Inject(DOCUMENT) private document: Document,private Services: HomeService) {}
 
   ngOnInit(): void {
     this.Services.getData().subscribe((res: any) => {
@@ -64,7 +61,6 @@ export class BestSellingItemComponent implements AfterViewInit {
 
     localStorage.setItem('singleProduct', JSON.stringify(this.singleProductObj));
   }
-
 
   addToCart(item: any) {
     const existingCart = localStorage.getItem('cart');

@@ -8,10 +8,9 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.css'
+  styleUrl: './main-content.component.css',
 })
 export class MainContentComponent implements OnInit {
-
   mainDataObj: any[] = [];
   paginatedItems: any[] = [];
   pageSize: number = 6;
@@ -19,11 +18,11 @@ export class MainContentComponent implements OnInit {
   totalItems: number = 0;
   sortKey: string = '';
   sortOrder: string = 'asc';
-
+  searchQuery: string = '';
 
   singlePostObj: any[] = [];
 
-  constructor(private service: BlogService) { }
+  constructor(private service: BlogService) {}
 
   ngOnInit(): void {
     this.service.getData().subscribe((res: any) => {
@@ -36,9 +35,11 @@ export class MainContentComponent implements OnInit {
   updatePaginatedItems() {
     const startIndex = this.pageIndex * this.pageSize;
     let sortedItems = this.sortItems(this.mainDataObj);
-    this.paginatedItems = sortedItems.slice(startIndex, startIndex + this.pageSize);
+    this.paginatedItems = sortedItems.slice(
+      startIndex,
+      startIndex + this.pageSize
+    );
   }
-
 
   sortItems(items: any[]): any[] {
     if (this.sortKey === '') {
@@ -70,7 +71,12 @@ export class MainContentComponent implements OnInit {
       this.sortKey = '';
     }
 
-    this.sortOrder = value.includes('Z - A') || value.includes('High') || value.includes('Lowest') ? 'desc' : 'asc';
+    this.sortOrder =
+      value.includes('Z - A') ||
+      value.includes('High') ||
+      value.includes('Lowest')
+        ? 'desc'
+        : 'asc';
     this.updatePaginatedItems();
   }
 
@@ -87,9 +93,6 @@ export class MainContentComponent implements OnInit {
     return Math.min((this.pageIndex + 1) * this.pageSize, this.totalItems);
   }
 
-
-
-
   goToView(item: any) {
     this.singlePostObj = [];
 
@@ -98,4 +101,18 @@ export class MainContentComponent implements OnInit {
     localStorage.setItem('singlePostData', JSON.stringify(this.singlePostObj));
   }
 
+  onSearchChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.searchQuery = input.value.toLowerCase();
+    this.filterItems();
+  }
+
+  filterItems() {
+    this.paginatedItems = this.mainDataObj.filter(
+      (item) =>
+        item.bookTitle.toLowerCase().includes(this.searchQuery) ||
+        item.bookDescription.toLowerCase().includes(this.searchQuery)
+    );
+    // You might also want to reset the pagination here if needed
+  }
 }
