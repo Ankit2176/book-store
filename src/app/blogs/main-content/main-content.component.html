@@ -1,6 +1,7 @@
 <div id="blog" class="padding-large">
   <div class="container">
     <div class="row flex-row-reverse g-md-5">
+
       <main class="col-md-9 mb-4 mb-md-0">
         <div class="filter-blog d-flex flex-wrap justify-content-between mb-4">
           <div class="showing-product">
@@ -55,16 +56,14 @@
 
       </main>
 
-
-
-
       <aside class="col-md-3">
         <div class="sidebar">
           <div class="widget-menu">
             <div class="widget-search-bar">
               <form class="d-flex border rounded-3 p-2" role="search">
 
-                <input class="form-control border-0 me-2 py-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control border-0 me-2 py-2" type="search" (input)="onSearchChange($event)"
+                  placeholder="Search" aria-label="Search">
 
                 <button class="btn rounded-3 p-3 d-flex align-items-center" type="submit">
 
@@ -140,6 +139,7 @@
           </div>
         </div>
       </aside>
+
     </div>
   </div>
 </div>

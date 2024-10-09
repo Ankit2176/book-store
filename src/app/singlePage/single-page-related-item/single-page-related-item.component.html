@@ -24,8 +24,7 @@
 
 
         @for (item of bestSellItem; track $index) {
-        <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 6"
-          style="width: 287.2px; margin-right: 20px;">
+        <div class="swiper-slide" role="group" aria-label="6 / 6" style="width: 287.2px; margin-right: 20px">
           <div class="card position-relative p-4 border rounded-3">
             <div class="position-absolute">
               <p class="bg-primary py-1 px-3 fs-6 text-white rounded-2 {{item.Display}}">
@@ -35,6 +34,8 @@
             <img src="{{item.Image}}" class="img-fluid shadow-sm" alt="product item" />
             <h6 class="mt-4 mb-0 fw-bold">
               <a [routerLink]='["/singlePage"]' (click)="goToView(item)">{{item.Head}}</a>
+
+           
             </h6>
             <div class="review-content d-flex">
               <p class="my-2 me-2 fs-6 text-black-50">{{item.Name}}</p>
@@ -60,13 +61,14 @@
 
             <span class="price text-primary fw-bold mb-2 fs-5">${{item.Price}}</span>
             <div class="card-concern position-absolute start-0 end-0 d-flex gap-2">
-              <button type="button" href="#" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
+              <button type="button" href="#" (click)="addToCart(item)" class="btn btn-dark" data-bs-toggle="tooltip" data-bs-placement="top"
                 data-bs-title="Tooltip on top">
                 <svg class="cart">
                   <use xlink:href="#cart"></use>
                 </svg>
               </button>
-              <a href="#" class="btn btn-dark">
+            
+              <a (click)="addToWishlist(item)" class="btn btn-dark">
                 <span>
                   <svg class="wishlist">
                     <use xlink:href="#heart"></use>
