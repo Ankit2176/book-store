@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class LatestPostsComponent implements OnInit {
 
   LatestPostObj: any
-
+  singlePostObj: any[] = []
 
   /**
    *
@@ -31,4 +31,13 @@ export class LatestPostsComponent implements OnInit {
 
   }
 
+  goToView(item: any) {
+    this.singlePostObj = [];
+
+    this.singlePostObj.push(item);
+
+    localStorage.setItem('singlePostData', JSON.stringify(this.singlePostObj));
+  }
+
 }
+

@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
 export class LimitedOfferComponent
   implements OnInit, OnDestroy {
   private timeInterval: any;
-  public endTime: Date = new Date('2024-12-31T23:59:59'); // Ensure this is a valid future date
+  public endTime: Date = new Date('2024-10-31T23:59:59'); // Ensure this is a valid future date
   public days: string = '0';
   public hours: string = '00';
   public minutes: string = '00';

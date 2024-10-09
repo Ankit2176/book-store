@@ -8,13 +8,13 @@
       @for(item of LatestPostObj ;track $index){
       <div class="col-md-3 posts mb-4">
         <img src="{{ item.Image }}" alt="post image" class="img-fluid rounded-3" />
-        <a [routerLink]="['/blog']" class="fs-6 text-primary">Books</a>
+        <a [routerLink]="['/blog']" (click)="goToView(item)" class="fs-6 text-primary">Books</a>
         <h4 class="card-title mb-2 text-capitalize text-dark">
-          <a [routerLink]="['/singlePost']">{{ item.Head }}</a>
+          <a [routerLink]="['/singlePost']"(click)="goToView(item)" >{{ item.Head }}</a>
         </h4>
         <p class="mb-2">
           {{ item.Des }}
-          <span><a class="text-decoration-underline text-black-50" [routerLink]="['/singlePost']">Read More</a></span>
+          <span><a class="text-decoration-underline text-black-50" [routerLink]="['/singlePost']"(click)="goToView(item)" >Read More</a></span>
         </p>
       </div>
       }

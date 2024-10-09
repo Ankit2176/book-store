@@ -99,13 +99,14 @@ export class MainShopComponent implements OnInit {
       this.sortKey = 'Name';
     } else if (value.includes('Rating')) {
       this.sortKey = 'Rating';
-    } else if (value.includes('Model')) {
-      this.sortKey = 'Model';
+    } else if (value.includes('Head')) {
+      this.sortKey = 'Head';
     } else {
       this.sortKey = '';
     }
 
     this.sortOrder = value.includes('Price') ? 'desc' : 'asc';
+    this.sortOrder = value.includes('Head') ? 'desc' : 'asc';
 
     this.sortOrder = value.includes('Z - A') || value.includes('High') || value.includes('Lowest') ? 'desc' : 'asc';
     this.updatePaginatedItems();
